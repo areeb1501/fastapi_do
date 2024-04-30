@@ -1,7 +1,21 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
+
+# Set up CORS
+origins = [
+    "http://localhost:3000",  # Allow specific origins (e.g., frontends running on localhost:3000)
+    "https://example.com"     # You can also specify different domains
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],  # Allowed request methods
+    allow_headers=["*"],  # Allowed request headers
+)
 
 @app.get("/")
 async def home():
