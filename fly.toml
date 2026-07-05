@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for fastapi-do on 2026-07-05T08:27:53Z
+# fly.toml app configuration file generated for fastapi-do-x2dusw on 2026-07-05T09:19:06Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'fastapi-do'
-primary_region = 'iad'
+app = 'fastapi-do-x2dusw'
+primary_region = 'ams'
 
 [build]
 
